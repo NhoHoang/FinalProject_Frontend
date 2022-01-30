@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Navbar from "./components/layouts/Navbar";
-import Footer from "./components/layouts/Footer.js";
+import Navbar from "./layouts/Navbar";
+import Footer from "./layouts/Footer.js";
 
-import Home from "./components/pages/Home.js";
-import About from "./components/pages/About.js";
-import Message from "./components/pages/Message.js";
-import Education from "./components/pages/Education";
-import FoodBank from "./components/pages/FoodBank";
-import SocialWelfare from "./components/pages/SocialWelfare";
-import Water from "./components/pages/Water";
-import WomanEmpowerment from "./components/pages/WomanEmpowerment";
-import Qurbani from "./components/pages/Qurbani";
+import Home from "./pages/Home.js";
+import About from "./pages/About.js";
+import Message from "./pages/Message.js";
+import Education from "./pages/Education";
+import FoodBank from "./pages/FoodBank";
+import SocialWelfare from "./pages/SocialWelfare";
+import Water from "./pages/Water";
+import WomanEmpowerment from "./pages/WomanEmpowerment";
+import Qurbani from "./pages/Qurbani";
 
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
