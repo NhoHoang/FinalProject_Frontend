@@ -15,7 +15,7 @@ const CardBlockItem = props => {
           </span>
           <p>
             <Link className={props.button} to={props.html}>
-              Learn More
+              Đọc thêm
             </Link>
           </p>
         </div>
