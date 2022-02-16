@@ -17,7 +17,7 @@ const Footer = () => {
                 alt="logo"
                 width="150px"
               ></img>
-              <h5 className="white-text">THE ILAHI FOUNDATION OF CANADA</h5>
+              <h5 className="white-text">TRÁI TIM CHO EM</h5>
               <p className="grey-text text-lighten-4"></p>
             </div>
             <div className="col l4 offset-l2 s12">
@@ -25,12 +25,12 @@ const Footer = () => {
               <ul>
                 <li>
                   <Link className="grey-text text-lighten-3" to="/about">
-                    About
+                    Giới thiệu
                   </Link>
                 </li>
                 <li>
                   <Link className="grey-text text-lighten-3" to="/message">
-                    Message
+                    Đóng góp
                   </Link>
                 </li>
                 <li>
@@ -38,7 +38,7 @@ const Footer = () => {
                     className="grey-text text-lighten-3 large-text"
                     to="/education"
                   >
-                    Education
+                    Đăng nhập
                   </Link>
                 </li>
                 <li>
@@ -46,7 +46,7 @@ const Footer = () => {
                     className="grey-text text-lighten-3 large-text"
                     to="/foodbank"
                   >
-                    Food Bank
+                    Đăng kí
                   </Link>
                 </li>
                 <li>
@@ -54,27 +54,27 @@ const Footer = () => {
                     className="grey-text text-lighten-3"
                     to="/socialwelfare"
                   >
-                    Social Welfare
+                    Thông tin thành viên
                   </Link>
                 </li>
                 <li>
                   <Link className="grey-text text-lighten-3" to="/water">
-                    Water
+                    Quản lí
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
-                    className="grey-text text-lighten-3"
-                    to="/womanempowerment"
+                    className='grey-text text-lighten-3'
+                    to='/womanempowerment'
                   >
                     Woman Empowerment
                   </Link>
                 </li>
                 <li>
-                  <Link className="grey-text text-lighten-3" to="/qurbani">
+                  <Link className='grey-text text-lighten-3' to='/qurbani'>
                     Qurbani
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -83,8 +83,8 @@ const Footer = () => {
           <div className="container">
             <div className="row">
               <div className="col s6">
-                <br />© 2020 The Ilahi Foundation of Canada Inc. All rights
-                reserved.
+                <br />@ Tài trợ bởi Tập đoàn Công nghiệp-Viễn thông Quân đội
+                (Viettel)
               </div>
               <div className="col s6">
                 <br />
@@ -100,7 +100,7 @@ const Footer = () => {
                   className="green-text  right"
                   href="http://www.datalchemy.ai/"
                 >
-                  Powered by datalchemy.ai
+                  Team 1
                 </a>
               </div>
             </div>
