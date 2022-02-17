@@ -36,6 +36,7 @@ const App = () => {
         <Route exact path="/womanempowerment" component={WomanEmpowerment} />
         <Route exact path="/qurbani" component={Qurbani} />
       </Switch>
+
       <Footer />
     </Router>
   );
