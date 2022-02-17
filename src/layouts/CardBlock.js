@@ -9,6 +9,7 @@ import WomanEmpowerment from "../data/img/whatwedo/womanEmpowerment.jpg";
 import Qurbani from "../data/img/whatwedo/qurbani.jpg";
 import DonatePostApi from "../api/DonatePostApi";
 
+
 class CardBlock extends React.Component {
   constructor(props) {
     super(props);
@@ -73,6 +74,7 @@ class CardBlock extends React.Component {
             Xem thêm
           </button>
         </div>
+
       </div>
     );
   }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CampaignModel from "./CampaignModal";
 const Campaign = () => {
   return (
+
     <div className="container teal center white-text">
       <div className="container">
         <h1>Đóng góp</h1>
@@ -23,12 +24,15 @@ const Campaign = () => {
         <p>
           Hãy chung tay đóng góp để góp phần xây dựng tương lai cho trẻ em Việt
           Nam!
+
         </p>
         <Link
           className="waves-effect waves-light pulse btn-large modal-trigger hide-on-small-only"
           to="/message"
         >
+
           <i className="material-icons right">mood</i>ĐÓNG GÓP
+
         </Link>
         {/* <Link
           className='waves-effect waves-light pulse btn-small modal-trigger hide-on-med-and-up'
