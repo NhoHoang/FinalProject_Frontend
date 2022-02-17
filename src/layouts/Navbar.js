@@ -1,115 +1,139 @@
-import React from "react";
+import React, { useState } from "react";
+
+// import {
+//   Dropdown,
+//   DropdownToggle,
+//   DropdownMenu,
+//   DropdownItem,
+// } from "react-bootstrap";
+
+import Dropdown from "react-bootstrap/Dropdown";
+
 import { Link } from "react-router-dom";
+import { Nav, NavLink, NavItem } from "react-bootstrap";
 
-const Navbar = () => {
-  return (
-    <header>
-      <div className="navbar-fixed">
-        <nav>
-          <div className="nav-wrapper teal">
-            <Link to="/" className="brand-logo hide-on-small-only">
-              TRÁI TIM CHO EM
-            </Link>
-            <Link
-              to="/"
-              className="brand-logo show-on-small hide-on-med-and-up"
-            >
-              VTI Group
-            </Link>
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+    };
 
-            <Link to="/" data-target="mobile-demo" className="sidenav-trigger">
-              <i className="material-icons">menu</i>
-            </Link>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li>
-                <Link to="/about">Giới thiệu</Link>
-              </li>
-              <li>
-                <Link to="/message">Đóng góp</Link>
+    this.showDropdown = this.showDropdown.bind(this);
+    this.hideDropdown = this.hideDropdown.bind(this);
+  }
 
-                {/* <ul role="menu" class=" dropdown-menu sub-nav">
-                  <li id="menu-item-5244">
-                    <a
-                      title="Hướng dẫn đóng góp"
-                      href="http://localhost:3000/message"
-                      className="external-link"
-                    >
-                      Hướng dẫn đóng góp
-                    </a>
-                  </li>
-                  <li
-                    id="menu-item-9908"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9908"
+  showDropdown = (e) => {
+    this.show = true;
+    this.setState({
+      show: true,
+    });
+  };
+
+  hideDropdown = (e) => {
+    this.show = false;
+    this.setState({
+      show: false,
+    });
+  };
+
+  render() {
+    return (
+      <header>
+        <div className="navbar-fixed">
+          <nav>
+            <div className="nav-wrapper teal">
+              <Link to="/" className="brand-logo hide-on-small-only">
+                TRÁI TIM CHO EM
+              </Link>
+              <Link
+                to="/"
+                className="brand-logo show-on-small hide-on-med-and-up"
+              >
+                VTI Group
+              </Link>
+              <Link
+                to="/"
+                data-target="mobile-demo"
+                className="sidenav-trigger"
+              >
+                <i className="material-icons">menu</i>
+              </Link>
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li>
+                  <Nav.Link href="about" className="grey-text text-lighten-3">
+                    Giới thiệu
+                  </Nav.Link>
+                </li>
+                <li>
+                  <Dropdown
+                    as={NavItem}
+                    show={this.show}
+                    onMouseEnter={(e) => this.showDropdown(e)}
+                    onMouseLeave={(e) => this.hideDropdown(e)}
                   >
-                    <a
-                      title="Cập nhật đóng góp"
-                      href="http://localhost:3000/womanempowerment"
-                      className="external-link"
+                    <Dropdown.Toggle
+                      as={NavLink}
+                      href="message"
+                      className="grey-text text-lighten-3"
                     >
-                      Cập nhật đóng góp
-                    </a>
-                  </li>
-                </ul> */}
+                      Đóng góp
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="message">Đóng góp</Dropdown.Item>
+                      <Dropdown.Item href="womanempowerment">
+                        Hướng dẫn đóng góp
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </li>
+                <li>
+                  <Nav.Link
+                    href="education"
+                    className="grey-text text-lighten-3"
+                  >
+                    Đăng nhập
+                  </Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link
+                    href="foodbank"
+                    className="grey-text text-lighten-3"
+                  >
+                    Đăng kí
+                  </Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link
+                    href="socialwelfare"
+                    className="grey-text text-lighten-3"
+                  >
+                    Thông tin thành viên
+                  </Nav.Link>
+                </li>
+                <li>
+                  <Nav.Link href="water" className="grey-text text-lighten-3">
+                    Quản lí
+                  </Nav.Link>
+                </li>
+                {/* <li>
+                <Link to="/womanempowerment">
+                  Woman Empowerment <i className="fas fa-caret-down" />{" "}
+                </Link>
+                {dropdown && <Dropdown />}
 
-                {/* <Dropdown.Menu>
-                  <Dropdown.Item href="http://localhost:3000/message">
-                    Hướng dẫn đóng góp
-                  </Dropdown.Item>
-                  <Dropdown.Item href="http://localhost:3000/womanempowerment">
-                    Cập nhật đóng góp
-                  </Dropdown.Item>
-                </Dropdown.Menu> */}
-              </li>
-              <li>
-                <Link to="/education">Đăng nhập</Link>
-              </li>
-              <li>
-                <Link to="/foodbank">Đăng kí</Link>
-              </li>
-              <li>
-                <Link to="/socialwelfare">Thông tin thành viên</Link>
-              </li>
-              <li>
-                <Link to="/water">Quản lí</Link>
-              </li>
-              {/* <li>
-                <Link to="/womanempowerment">Woman Empowerment</Link>
               </li>
               <li>
                 <Link to="qurbani">Qurbani</Link>
               </li> */}
-            </ul>
-          </div>
-        </nav>
-      </div>
-      {/* <ul className="sidenav " id="mobile-demo">
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/message">Message</Link>
-        </li>
-        <li>
-          <Link to="/education">Education</Link>
-        </li>
-        <li>
-          <Link to="/foodbank">Food Bank</Link>
-        </li>
-        <li>
-          <Link to="/socialwelfare">Social Welfare</Link>
-        </li>
-        <li>
-          <Link to="/water">Water</Link>
-        </li>
-        <li>
-          <Link to="/womanempowerment">Woman Empowerment</Link>
-        </li>
-        <li>
-          <Link to="qurbani">Qurbani</Link>
-        </li>
-      </ul> */}
-    </header>
-  );
-};
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    );
+  }
+}
 
 export default Navbar;
