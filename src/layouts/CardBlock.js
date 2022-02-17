@@ -14,7 +14,6 @@ class CardBlock extends React.Component {
     super(props);
     this.state = {
       donators: [],
-      listPost: [],
     };
   }
 
